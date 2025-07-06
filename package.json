@@ -1,0 +1,69 @@
+{
+  "name": "json2ts-type",
+  "displayName": "JSON to TypeScript Type",
+  "description": "将 JSON 转换为 TypeScript 类型定义，支持注释保留。[Convert JSON to TypeScript type definitions with comment preservation]",
+  "version": "1.0.0",
+  "publisher": "bobostudio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bobostudio/json2ts-type"
+  },
+  "author": {
+    "name": "bobostudio",
+    "email": "15919854639@163.com"
+  },
+  "keywords": [
+    "json",
+    "typescript",
+    "type",
+    "converter",
+    "interface",
+    "definition"
+  ],
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "json2ts-type.pasteAndConvert",
+        "title": "粘贴 JSON 转 TS 类型"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "json2ts-type.pasteAndConvert",
+        "key": "ctrl+1",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.101.0",
+    "@typescript-eslint/eslint-plugin": "^8.31.1",
+    "@typescript-eslint/parser": "^8.31.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.25.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1"
+  }
+}
