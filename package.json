@@ -2,7 +2,7 @@
   "name": "json2ts-type",
   "displayName": "JSON to TypeScript Type",
   "description": "将 JSON 转换为 TypeScript 类型定义，支持注释保留。[Convert JSON to TypeScript type definitions with comment preservation]",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "bobostudio",
   "repository": {
     "type": "git",
